@@ -6,6 +6,9 @@ class CustomSearchIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      onTap: () {
+
+      },
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 8,vertical: 15),
         decoration: BoxDecoration(
