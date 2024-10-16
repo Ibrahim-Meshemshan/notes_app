@@ -4,11 +4,20 @@ import 'package:notes_app/constants.dart';
 class CustomFormFiled extends StatelessWidget {
  final String text;
  final int lines;
-  CustomFormFiled({required this.text, this.lines = 1});
+ final Function(String?)? onSaved;
+  CustomFormFiled({required this.text, this.lines = 1, this.onSaved});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onSaved: onSaved,
+      validator: (value) {
+        if(value?.isEmpty ?? true){
+          return 'Field is required';
+        }else{
+          return null;
+        }
+      },
       cursorColor: kPrimaryColor,
       maxLines: lines,
       decoration: InputDecoration(

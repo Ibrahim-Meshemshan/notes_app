@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:notes_app/constants.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key});
-
+  const CustomButton({super.key, this.onTap});
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
@@ -15,9 +15,7 @@ class CustomButton extends StatelessWidget {
         backgroundColor: kPrimaryColor,
         padding: EdgeInsets.all(12),
       ),
-      onPressed: () {
-
-      },
+      onPressed: onTap,
       child: const Text(
         'Add',
         style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold),
