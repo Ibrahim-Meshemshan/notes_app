@@ -6,16 +6,18 @@ class CustomSearchIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-
-      },
+      onTap: () {},
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 8,vertical: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 15),
         decoration: BoxDecoration(
             color: Colors.white.withOpacity(0.3),
-            borderRadius: BorderRadius.circular(16)
+            borderRadius: BorderRadius.circular(16)),
+        child: const Center(
+          child: Icon(
+            Icons.search,
+            size: 28,
+          ),
         ),
-        child: Center(child: Icon(Icons.search,size: 28,)),
       ),
     );
   }
