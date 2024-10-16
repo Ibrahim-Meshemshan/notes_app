@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:notes_app/constants.dart';
 
 class CustomFormFiled extends StatelessWidget {
-  String text;
-  int lines;
+ final String text;
+ final int lines;
   CustomFormFiled({required this.text, this.lines = 1});
 
   @override

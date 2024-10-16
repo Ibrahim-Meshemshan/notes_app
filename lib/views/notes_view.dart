@@ -10,7 +10,13 @@ class NotesView extends StatelessWidget {
     return Scaffold(
       body: const NotesViewBody(),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.cyan,
+        shape: const StadiumBorder(
+          side: BorderSide(
+
+            color: Colors.black
+          )
+        ),
+        backgroundColor: Colors.black.withOpacity(0.7),
         onPressed: () {
           showModalBottomSheet(
             shape: RoundedRectangleBorder(

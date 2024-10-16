@@ -14,13 +14,13 @@ class AddNotesBottomSheet extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               CustomFormFiled(text: 'Title'),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               CustomFormFiled(text: 'Content', lines: 5),
-              SizedBox(height: 64),
-              CustomButton(),
-              SizedBox(height: 32),
+              const SizedBox(height: 64),
+              const CustomButton(),
+              const SizedBox(height: 32),
             ],
           ),
         ),
