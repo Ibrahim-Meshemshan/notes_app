@@ -8,6 +8,7 @@ class NotesView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       body: const NotesViewBody(),
       floatingActionButton: FloatingActionButton(
         shape: const StadiumBorder(
@@ -19,6 +20,8 @@ class NotesView extends StatelessWidget {
         backgroundColor: Colors.black.withOpacity(0.7),
         onPressed: () {
           showModalBottomSheet(
+            isScrollControlled: true,
+
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(16)
             ),
