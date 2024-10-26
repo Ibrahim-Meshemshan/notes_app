@@ -5,6 +5,7 @@ import 'package:notes_app/cubit/add_note/add_note_cubit.dart';
 import 'package:notes_app/models/notes_models.dart';
 
 import '../../cubit/notes/notes_cubit.dart';
+import 'colors_list_view.dart';
 import 'custom_button.dart';
 import 'custom_form_filed.dart';
 
@@ -44,6 +45,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
               subTitle = value;
             },
           ),
+          const ColorsListView(),
           const SizedBox(height: 64),
           CustomButton(
             onTap: () {
@@ -75,3 +77,4 @@ class _AddNoteFormState extends State<AddNoteForm> {
     );
   }
 }
+
