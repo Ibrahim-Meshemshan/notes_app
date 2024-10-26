@@ -45,6 +45,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
               subTitle = value;
             },
           ),
+          SizedBox(height: 20),
           const ColorsListView(),
           const SizedBox(height: 64),
           CustomButton(
@@ -54,8 +55,8 @@ class _AddNoteFormState extends State<AddNoteForm> {
                 // todo:create
                 var currentDate = DateTime.now();
 
-
-                var formattedDate = DateFormat('dd /mm /yyyy').format(currentDate);
+                var formattedDate =
+                    DateFormat('dd /mm /yyyy').format(currentDate);
                 var noteModel = NotesModels(
                     title: title!,
                     subTitle: subTitle!,
@@ -77,4 +78,3 @@ class _AddNoteFormState extends State<AddNoteForm> {
     );
   }
 }
-

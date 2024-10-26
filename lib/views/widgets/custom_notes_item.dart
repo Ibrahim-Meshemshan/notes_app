@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -30,7 +32,7 @@ class NoteItem extends StatelessWidget {
           child: Container(
             padding: const EdgeInsets.only(top: 24, bottom: 24, left: 16),
             decoration: BoxDecoration(
-              color:  Colors.deepOrangeAccent,
+              color:  Color(note.color),
               borderRadius: BorderRadius.circular(16),
             ),
             child: Column(
