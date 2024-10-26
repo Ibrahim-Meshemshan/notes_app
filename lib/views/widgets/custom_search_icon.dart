@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CustomSearchIcon extends StatelessWidget {
-  const CustomSearchIcon({super.key, required this.iconData});
+class CustomIcon extends StatelessWidget {
+  const CustomIcon({super.key, required this.iconData, this.onTap});
   final IconData iconData;
+final  Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: onTap,
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 15),
         decoration: BoxDecoration(

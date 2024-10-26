@@ -5,11 +5,13 @@ class CustomFormFiled extends StatelessWidget {
  final String text;
  final int lines;
  final Function(String?)? onSaved;
-  CustomFormFiled({required this.text, this.lines = 1, this.onSaved});
+ final Function(String)? onChanged;
+  CustomFormFiled({required this.text, this.lines = 1, this.onSaved, this.onChanged});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onChanged: onChanged,
       onSaved: onSaved,
       validator: (value) {
         if(value!=null && value.trim().isEmpty){
